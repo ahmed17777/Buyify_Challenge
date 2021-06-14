@@ -14,7 +14,7 @@ SQL server: https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL
 ## Shoe Store Performance Analysis 
 
 Buyify has provided us with the following statement: 
-> "On Buypify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis."
+> "On Buyify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis."
 
 **Question 1.**
 
@@ -37,9 +37,12 @@ To further investigate this, I have visualized the data using a boxplot.
   ![4](https://user-images.githubusercontent.com/45697471/121947716-5e53d080-cd24-11eb-8dad-55b97afc8568.jpg)
 
 
-The boxplot shows us that there is one outlier that is much greater than the rest of the data, which is the maximum value of 704,000. We can also see by zooming in that the &quot;box&quot; component of the boxplot is much lower the rest of the values in the dataset. This means that there could be a lot of outliers, which we can further look into by using the groupby ( ) function in Pandas.
+The boxplot shows us that there is one outlier that is much greater than the rest of the data, which is the maximum value of 704,000. We can also see by zooming in that the "box" component of the boxplot is much lower the rest of the values in the dataset. This means that there could be a lot of outliers, which we can further look into by using the groupby ( ) function in Pandas.
 
-![](RackMultipart20210614-4-g4tryp_html_8c17f25a52cfac75.png)Using the groupby ( ) function, I was able to group the order amount values and create a column for the count of values sorted in descending order as shown above. As we can see from the table, some of the larger order amounts such as 704000, 77175, 51450, and 25725 are repeated frequently. We can gather insight by looking into these rows from the dataset.
+![5](https://user-images.githubusercontent.com/45697471/121947931-a07d1200-cd24-11eb-98e2-f91f7f84cb28.jpg)
+
+
+Using the groupby ( ) function, I was able to group the order amount values and create a column for the count of values sorted in descending order as shown above. As we can see from the table, some of the larger order amounts such as 704000, 77175, 51450, and 25725 are repeated frequently. We can gather insight by looking into these rows from the dataset.
 
 ![](RackMultipart20210614-4-g4tryp_html_e5e8f508d657e782.png)
 
