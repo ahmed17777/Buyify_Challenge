@@ -1,5 +1,21 @@
 # Buyify Challenge
 
+Syed Ahmed 
+June 14, 2021
+
+## Overview 
+
+In this project, I will be analyzing a dataset provided by Buyify, an ecommerce online store company that is looking to find out how their sneaker shops are doing using Python and Pandas. Buyify has also requested an analysis of how efficiently their warehouse teams are at shipping orders, which I will be further exploring using SQL. 
+
+## Resources 
+Dataset: Buyify_Challenge.csv 
+SQL server: https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL 
+
+## Shoe Store Performance Analysis 
+
+Buyify has provided us with the following statement: 
+> "On Buypify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis."
+
 **Question 1.**
 
 1. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
