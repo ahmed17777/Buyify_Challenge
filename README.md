@@ -4,7 +4,7 @@
 
 1. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
 
-![](RackMultipart20210614-4-g4tryp_html_92a71cc520038856.png)
+
 
 My initial thought is to try to figure out where the $3145 AOV is derived from. By importing the excel spreadsheet as a CSV into Jupyter Notebook, I can further investigate this.
 
@@ -68,4 +68,6 @@ Now, all that is left is to figure out what product corresponds to the top Produ
 
 From our final table, we can see that the most ordered product in Germany is Boston Crab Meat, with 160 units ordered.
 
-![](RackMultipart20210614-4-g4tryp_html_181e98e2850c99df.png) **SQL Database ERD**
+## SQL Database ERD
+
+![QuickDBD-export](https://user-images.githubusercontent.com/45697471/121945764-264b8e00-cd22-11eb-9abb-72c98b981ac8.png)
