@@ -67,7 +67,9 @@ a) How many orders were shipped by Speedy Express in total?
 
 By doing a simple SELECT statement, we can see that the number of orders is in the &#39;Orders&#39; table, and shipper information for Speedy Express is in the Shippers table. We can join both tables on Shipper ID to get the number of orders shipped by Speedy Express. The select statement will look like the following:
 
+
   ![9](https://user-images.githubusercontent.com/45697471/121948413-39ac2880-cd25-11eb-9e1a-47539d0bc428.jpg)
+
 
 From this query, the total number of orders is 54.
 
@@ -75,7 +77,9 @@ b) What is the last name of the employee with the most orders?
 
 The employee last names are stored in the 'Employees' table, and the order information is stored in the 'Orders' table. We can join both tables on Employee ID and use a GROUP BY statement to group the last names by number of orders.
 
+
   ![10](https://user-images.githubusercontent.com/45697471/121948643-7d069700-cd25-11eb-8b95-8371853f341c.jpg)
+
 
 Based on this query, Peacock had the most orders, with 40 orders.
 
@@ -83,18 +87,24 @@ c) What product was ordered the most by customers in Germany?
 
 In order to get the final answer to this question, we have to perform multiple joins, as the data necessary to answer this question is scattered across different tables in this database. Our first query joins the 'Orders' table with the 'Customers' table on Customer ID, which returns a table with two columns: Order Id and Country.
 
+
   ![11](https://user-images.githubusercontent.com/45697471/121948897-d7075c80-cd25-11eb-955a-08475995f877.jpg)
+
 
 The next join tells us which item was ordered the most. We join &#39;Orders&#39;, &#39;Customers&#39;, and &#39;OrderDetails&#39; to find the total quantity of each product by filtering the table by Country and grouping &#39;OrderDetails&#39; by Product ID. The result of this query is a table with three columns: Country, Product ID, and TotalOrdered. I also sorted the TotalOrdered column by descending to show the product that was ordered most.
 
+
   ![12](https://user-images.githubusercontent.com/45697471/121948922-e090c480-cd25-11eb-8b60-dfedc5357431.jpg)
+  
+  ![13](https://user-images.githubusercontent.com/45697471/121949058-0cac4580-cd26-11eb-8e6b-5ce9788160ed.jpg)
 
 
 Now, all that is left is to figure out what product corresponds to the top Product ID. To get our final answer, we need to join the &#39;Products&#39; table with our previous table.
 
-![](RackMultipart20210614-4-g4tryp_html_aefa9b00498611e6.png)
+  ![14](https://user-images.githubusercontent.com/45697471/121949069-0fa73600-cd26-11eb-9caf-23bfc0d7c4e1.jpg)
+  
+  ![15](https://user-images.githubusercontent.com/45697471/121949074-1170f980-cd26-11eb-943e-8b2d88aaed5d.jpg)
 
-![](RackMultipart20210614-4-g4tryp_html_cd2329a1bf4b2226.png)
 
 From our final table, we can see that the most ordered product in Germany is Boston Crab Meat, with 160 units ordered.
 
