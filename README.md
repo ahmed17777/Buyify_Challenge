@@ -20,18 +20,22 @@ Buyify has provided us with the following statement:
 
 1. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
 
-![1](https://user-images.githubusercontent.com/45697471/121947571-2d739b80-cd24-11eb-9e6e-8738e472933e.jpg)
+  ![1](https://user-images.githubusercontent.com/45697471/121947571-2d739b80-cd24-11eb-9e6e-8738e472933e.jpg)
 
 My initial thought is to try to figure out where the $3145 AOV is derived from. By importing the excel spreadsheet as a CSV into Jupyter Notebook, I can further investigate this.
 
-![2](https://user-images.githubusercontent.com/45697471/121947602-33697c80-cd24-11eb-99e2-780aa0d6ec6f.jpg)
+  ![2](https://user-images.githubusercontent.com/45697471/121947602-33697c80-cd24-11eb-99e2-780aa0d6ec6f.jpg)
 
 
 Using the describe ( ) function in Pandas, we can see the summary statistics of the Order Amount table. As we can see from the results of our query, the $3145 AOV is accurate based on the given data. However, we see that there is a standard deviation of $41,282, which tells us that on average, our values vary 41,282 from the mean. This makes the mean an inaccurate representation of the AOV.
 
 The describe ( ) function has also given us other insight into the data, other than the mean and standard deviation. We can see that the minimum value for order amount is 90, and the maximum goes all the way up to 704,000. Comparing these values to the median (284), first quartile (163) and third quartile (390), we can see that there is a significant increase from the upper quartile to the maximum value of 704,000. With about 5,000 records in our dataset, we can speculate that there are outliers that may be inflating our mean.
 
-![](RackMultipart20210614-4-g4tryp_html_b42a850832962122.png) ![](RackMultipart20210614-4-g4tryp_html_2defae96361e8cdf.png)To further investigate this, I have visualized the data using a boxplot.
+To further investigate this, I have visualized the data using a boxplot.
+
+![3](https://user-images.githubusercontent.com/45697471/121947711-5bf17680-cd24-11eb-9b00-cf486b3c70bd.jpg)
+![4](https://user-images.githubusercontent.com/45697471/121947716-5e53d080-cd24-11eb-8dad-55b97afc8568.jpg)
+
 
 The boxplot shows us that there is one outlier that is much greater than the rest of the data, which is the maximum value of 704,000. We can also see by zooming in that the &quot;box&quot; component of the boxplot is much lower the rest of the values in the dataset. This means that there could be a lot of outliers, which we can further look into by using the groupby ( ) function in Pandas.
 
