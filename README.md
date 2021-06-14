@@ -83,11 +83,12 @@ c) What product was ordered the most by customers in Germany?
 
 In order to get the final answer to this question, we have to perform multiple joins, as the data necessary to answer this question is scattered across different tables in this database. Our first query joins the 'Orders' table with the 'Customers' table on Customer ID, which returns a table with two columns: Order Id and Country.
 
-![](RackMultipart20210614-4-g4tryp_html_49048f414d43d392.png)
+  ![11](https://user-images.githubusercontent.com/45697471/121948897-d7075c80-cd25-11eb-955a-08475995f877.jpg)
 
-T ![](RackMultipart20210614-4-g4tryp_html_6ddb7faae860a9a.png) he next join tells us which item was ordered the most. We join &#39;Orders&#39;, &#39;Customers&#39;, and &#39;OrderDetails&#39; to find the total quantity of each product by filtering the table by Country and grouping &#39;OrderDetails&#39; by Product ID. The result of this query is a table with three columns: Country, Product ID, and TotalOrdered. I also sorted the TotalOrdered column by descending to show the product that was ordered most.
+The next join tells us which item was ordered the most. We join &#39;Orders&#39;, &#39;Customers&#39;, and &#39;OrderDetails&#39; to find the total quantity of each product by filtering the table by Country and grouping &#39;OrderDetails&#39; by Product ID. The result of this query is a table with three columns: Country, Product ID, and TotalOrdered. I also sorted the TotalOrdered column by descending to show the product that was ordered most.
 
-![](RackMultipart20210614-4-g4tryp_html_a05fd16d22f25d5d.png)
+  ![12](https://user-images.githubusercontent.com/45697471/121948922-e090c480-cd25-11eb-8b60-dfedc5357431.jpg)
+
 
 Now, all that is left is to figure out what product corresponds to the top Product ID. To get our final answer, we need to join the &#39;Products&#39; table with our previous table.
 
