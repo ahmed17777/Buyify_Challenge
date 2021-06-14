@@ -63,23 +63,25 @@ As we can see below, our truncated date frame utilizes the 1.5 IQR which drops o
 
 **Question 2.**
 
-1. How many orders were shipped by Speedy Express in total?
+a) How many orders were shipped by Speedy Express in total?
 
 By doing a simple SELECT statement, we can see that the number of orders is in the &#39;Orders&#39; table, and shipper information for Speedy Express is in the Shippers table. We can join both tables on Shipper ID to get the number of orders shipped by Speedy Express. The select statement will look like the following:
 
-![](RackMultipart20210614-4-g4tryp_html_1c62c53cc1982275.png)
+  ![9](https://user-images.githubusercontent.com/45697471/121948413-39ac2880-cd25-11eb-9e1a-47539d0bc428.jpg)
 
 From this query, the total number of orders is 54.
 
-1. What is the last name of the employee with the most orders?
+b) What is the last name of the employee with the most orders?
 
-T ![](RackMultipart20210614-4-g4tryp_html_ce0bf91fb8b78dd4.png) he employee last names are stored in the &#39;Employees&#39; table, and the order information is stored in the &#39;Orders&#39; table. We can join both tables on Employee ID and use a GROUP BY statement to group the last names by number of orders.
+The employee last names are stored in the 'Employees' table, and the order information is stored in the 'Orders' table. We can join both tables on Employee ID and use a GROUP BY statement to group the last names by number of orders.
+
+  ![10](https://user-images.githubusercontent.com/45697471/121948643-7d069700-cd25-11eb-8b95-8371853f341c.jpg)
 
 Based on this query, Peacock had the most orders, with 40 orders.
 
-1. What product was ordered the most by customers in Germany?
+c) What product was ordered the most by customers in Germany?
 
-In order to get the final answer to this question, we have to perform multiple joins, as the data necessary to answer this question is scattered across different tables in this database. Our first query joins the &#39;Orders&#39; table with the &#39;Customers&#39; table on Customer ID, which returns a table with two columns: Order Id and Country.
+In order to get the final answer to this question, we have to perform multiple joins, as the data necessary to answer this question is scattered across different tables in this database. Our first query joins the 'Orders' table with the 'Customers' table on Customer ID, which returns a table with two columns: Order Id and Country.
 
 ![](RackMultipart20210614-4-g4tryp_html_49048f414d43d392.png)
 
