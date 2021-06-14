@@ -9,6 +9,7 @@ In this project, I will be analyzing a dataset provided by Buyify, an ecommerce 
 
 ## Resources 
 Dataset: Buyify_Challenge.csv 
+
 SQL server: https://www.w3schools.com/SQL/TRYSQL.ASP?FILENAME=TRYSQL_SELECT_ALL 
 
 ## Shoe Store Performance Analysis 
