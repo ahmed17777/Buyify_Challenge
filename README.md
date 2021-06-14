@@ -20,11 +20,12 @@ Buyify has provided us with the following statement:
 
 1. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
 
-
+![1](https://user-images.githubusercontent.com/45697471/121947571-2d739b80-cd24-11eb-9e6e-8738e472933e.jpg)
 
 My initial thought is to try to figure out where the $3145 AOV is derived from. By importing the excel spreadsheet as a CSV into Jupyter Notebook, I can further investigate this.
 
-![](RackMultipart20210614-4-g4tryp_html_6933326e5535cd1e.png)
+![2](https://user-images.githubusercontent.com/45697471/121947602-33697c80-cd24-11eb-99e2-780aa0d6ec6f.jpg)
+
 
 Using the describe ( ) function in Pandas, we can see the summary statistics of the Order Amount table. As we can see from the results of our query, the $3145 AOV is accurate based on the given data. However, we see that there is a standard deviation of $41,282, which tells us that on average, our values vary 41,282 from the mean. This makes the mean an inaccurate representation of the AOV.
 
