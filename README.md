@@ -18,7 +18,7 @@ Buyify has provided us with the following statement:
 
 **Question 1.**
 
-**a) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
+a) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
 
   ![1](https://user-images.githubusercontent.com/45697471/121947571-2d739b80-cd24-11eb-9e6e-8738e472933e.jpg)
 
@@ -111,3 +111,7 @@ From our final table, we can see that the most ordered product in Germany is Bos
 ## SQL Database ERD
 
 ![QuickDBD-export](https://user-images.githubusercontent.com/45697471/121945764-264b8e00-cd22-11eb-9abb-72c98b981ac8.png)
+
+
+### Contact 
+Email: mishaal22s@gmail.com 
