@@ -39,24 +39,27 @@ To further investigate this, I have visualized the data using a boxplot.
 
 The boxplot shows us that there is one outlier that is much greater than the rest of the data, which is the maximum value of 704,000. We can also see by zooming in that the "box" component of the boxplot is much lower the rest of the values in the dataset. This means that there could be a lot of outliers, which we can further look into by using the groupby ( ) function in Pandas.
 
-![5](https://user-images.githubusercontent.com/45697471/121947931-a07d1200-cd24-11eb-98e2-f91f7f84cb28.jpg)
+  ![5](https://user-images.githubusercontent.com/45697471/121947931-a07d1200-cd24-11eb-98e2-f91f7f84cb28.jpg)
 
 
 Using the groupby ( ) function, I was able to group the order amount values and create a column for the count of values sorted in descending order as shown above. As we can see from the table, some of the larger order amounts such as 704000, 77175, 51450, and 25725 are repeated frequently. We can gather insight by looking into these rows from the dataset.
 
-![](RackMultipart20210614-4-g4tryp_html_e5e8f508d657e782.png)
+  ![6](https://user-images.githubusercontent.com/45697471/121948058-c7d3df00-cd24-11eb-94b5-d927e734c13e.jpg)
+
 
 We can see that our maximum order amount occurs frequently and at the exact same time of 4:00 AM each day between the same shop id and user id. We see similar patterns for the other high order amounts that we queried. We can speculate that some of these large transactions could be some supplier purchasing at bulk, as the order amount is consistently the same as well as the time of purchase and user id.
 
-1. What metric would you report for this dataset?
+b) What metric would you report for this dataset?
 
 Due to the fact that we have extreme points that are inflating our mean, it would be a better idea to use another metric to evaluate our data. The most accurate representation of order data would be to use the median value of a truncated dataset that removes outliers from the dataset. We can use the 1.5 IQR rule to truncate our dataset and create a more accurate representation of order value, as this will filter out most outliers.
 
-1. What is its value?
+c) What is its value?
 
 As we can see below, our truncated date frame utilizes the 1.5 IQR which drops outliers which are 1.5 \* IQR above the third quartile, and 1.5 \* IQR below the first quartile. In the end, we have a median value of 280, which would be the best representation of order values. We have also decreased the standard deviation to 144, which is a lot more reasonable.
 
-![](RackMultipart20210614-4-g4tryp_html_5b64656546001fbe.png) ![](RackMultipart20210614-4-g4tryp_html_32988904f03d1007.png)
+  ![7](https://user-images.githubusercontent.com/45697471/121948198-ee921580-cd24-11eb-91a3-379640b50706.jpg)
+  ![8](https://user-images.githubusercontent.com/45697471/121948204-f0f46f80-cd24-11eb-8136-3a2b1719fdae.jpg)
+
 
 **Question 2.**
 
