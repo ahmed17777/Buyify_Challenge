@@ -33,8 +33,8 @@ The describe ( ) function has also given us other insight into the data, other t
 
 To further investigate this, I have visualized the data using a boxplot.
 
-![3](https://user-images.githubusercontent.com/45697471/121947711-5bf17680-cd24-11eb-9b00-cf486b3c70bd.jpg)
-![4](https://user-images.githubusercontent.com/45697471/121947716-5e53d080-cd24-11eb-8dad-55b97afc8568.jpg)
+  ![3](https://user-images.githubusercontent.com/45697471/121947711-5bf17680-cd24-11eb-9b00-cf486b3c70bd.jpg)
+  ![4](https://user-images.githubusercontent.com/45697471/121947716-5e53d080-cd24-11eb-8dad-55b97afc8568.jpg)
 
 
 The boxplot shows us that there is one outlier that is much greater than the rest of the data, which is the maximum value of 704,000. We can also see by zooming in that the &quot;box&quot; component of the boxplot is much lower the rest of the values in the dataset. This means that there could be a lot of outliers, which we can further look into by using the groupby ( ) function in Pandas.
