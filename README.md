@@ -49,11 +49,11 @@ Using the groupby ( ) function, I was able to group the order amount values and 
 
 We can see that our maximum order amount occurs frequently and at the exact same time of 4:00 AM each day between the same shop id and user id. We see similar patterns for the other high order amounts that we queried. We can speculate that some of these large transactions could be some supplier purchasing at bulk, as the order amount is consistently the same as well as the time of purchase and user id.
 
-b) What metric would you report for this dataset?
+b) **What metric would you report for this dataset?**
 
 Due to the fact that we have extreme points that are inflating our mean, it would be a better idea to use another metric to evaluate our data. The most accurate representation of order data would be to use the median value of a truncated dataset that removes outliers from the dataset. We can use the 1.5 IQR rule to truncate our dataset and create a more accurate representation of order value, as this will filter out most outliers.
 
-c) What is its value?
+c) **What is its value?**
 
 As we can see below, our truncated date frame utilizes the 1.5 IQR which drops outliers which are 1.5 \* IQR above the third quartile, and 1.5 \* IQR below the first quartile. In the end, we have a median value of 280, which would be the best representation of order values. We have also decreased the standard deviation to 144, which is a lot more reasonable.
 
@@ -63,7 +63,7 @@ As we can see below, our truncated date frame utilizes the 1.5 IQR which drops o
 
 **Question 2.**
 
-a) How many orders were shipped by Speedy Express in total?
+a) **How many orders were shipped by Speedy Express in total?**
 
 By doing a simple SELECT statement, we can see that the number of orders is in the &#39;Orders&#39; table, and shipper information for Speedy Express is in the Shippers table. We can join both tables on Shipper ID to get the number of orders shipped by Speedy Express. The select statement will look like the following:
 
@@ -73,7 +73,7 @@ By doing a simple SELECT statement, we can see that the number of orders is in t
 
 From this query, the total number of orders is 54.
 
-b) What is the last name of the employee with the most orders?
+b) **What is the last name of the employee with the most orders?**
 
 The employee last names are stored in the 'Employees' table, and the order information is stored in the 'Orders' table. We can join both tables on Employee ID and use a GROUP BY statement to group the last names by number of orders.
 
@@ -83,7 +83,7 @@ The employee last names are stored in the 'Employees' table, and the order infor
 
 Based on this query, Peacock had the most orders, with 40 orders.
 
-c) What product was ordered the most by customers in Germany?
+c) **What product was ordered the most by customers in Germany?**
 
 In order to get the final answer to this question, we have to perform multiple joins, as the data necessary to answer this question is scattered across different tables in this database. Our first query joins the 'Orders' table with the 'Customers' table on Customer ID, which returns a table with two columns: Order Id and Country.
 
